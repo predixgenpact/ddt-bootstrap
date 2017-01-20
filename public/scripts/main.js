@@ -1,3 +1,3 @@
-define(['modules/sample-module/main'], function() {
+define(['modules/main'], function() {
 
 });

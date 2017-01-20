@@ -14,7 +14,7 @@ define(['angular', 'angular-ui-router'], function(angular) {
          * This is where the name of the route is matched to the controller and view template.
          */
         $stateProvider
-            .state('secure', {
+            /*.state('secure', {
                 template: '<ui-view/>',
                 abstract: true,
                 resolve: {
@@ -28,27 +28,38 @@ define(['angular', 'angular-ui-router'], function(angular) {
                         return deferred.promise;
                     }]
                 }
+            })*/
+            .state('defectRatio', {
+                url: '/defectRatio',
+                templateUrl: 'views/defect-ratio-dashboard.html',
+                controller: 'DefectRatioCtrl'
+            })
+            .state('defectPattern', {
+                url: '/defectPattern',
+                templateUrl: 'views/defect-pattern-dashboard.html',
+                controller: 'DefectPatternCtrl'
+            })
+            .state('debriefTool', {
+                url: '/debriefTool',
+                templateUrl: 'views/defect-pattern-dashboard.html',
+                controller: 'DebriefReviewToolCtrl'
+            })
+            .state('detailedGraphs', {
+                url: '/detailedGraphs',
+                templateUrl: 'views/detailed-graphs.html',
+                controller: 'DebriefReviewToolCtrl'
             })
             .state('dashboards', {
-                parent: 'secure',
+                //parent: 'secure',
                 url: '/dashboards',
                 templateUrl: 'views/dashboards.html',
-                controller: 'DashboardsCtrl'
+                //controller: 'DashboardsCtrl'
             })
-            .state('blankpage', {
-                url: '/blankpage',
-                templateUrl: 'views/blank-page.html'
-            })
-            .state('blanksubpage', {
-                url: '/blanksubpage',
-                templateUrl: 'views/blank-sub-page.html'
-            });
-
 
         $urlRouterProvider.otherwise(function ($injector) {
             var $state = $injector.get('$state');
-            document.querySelector('px-app-nav').markSelected('/dashboards');
-            $state.go('dashboards');
+            document.querySelector('px-app-nav').markSelected('/');
+            $state.go('defectRatio');
         });
 
     }]);

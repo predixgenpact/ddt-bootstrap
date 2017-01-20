@@ -44,7 +44,7 @@ require.config({
         'angular-mocks': '../bower_components/angular-mocks/angular-mocks',
         'angular-resource': '../bower_components/angular-resource/angular-resource',
         'angular-route': '../bower_components/angular-route/angular-route',
-
+        'angular-animate': '../bower_components/angular-animate/angular-animate.min',
         // angular ui router
         'angular-ui-router': '../bower_components/angular-ui-router/release/angular-ui-router.min',
 
@@ -67,13 +67,14 @@ require.config({
 
         lodash: '../bower_components/lodash/dist/lodash.min',
         jquery: '../bower_components/jquery/dist/jquery.min',
-
+        highcharts: '../bower_components/highcharts/highcharts',
+        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap.min'
     },
     priority: [
         'jquery',
         'angular',
         'angular-resource',
-        'angular-route'
+        'angular-route',
     ],
     shim: {
         'angular': {
@@ -94,8 +95,11 @@ require.config({
         'px-datasource': {
             deps: ['angular', 'lodash']
         },
+        'bootstrap': {
+            deps: ['jquery']
+        },
         'app': {
-            deps: ['angular']
+            deps: ['angular', 'bootstrap']
         }
 
     }

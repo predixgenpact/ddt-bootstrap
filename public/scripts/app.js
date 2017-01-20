@@ -9,7 +9,8 @@ define([
     'routes',
     'interceptors',
     'px-datasource',
-    'ng-bind-polymer'
+    'ng-bind-polymer',
+    'angular-animate'
 ], function ($, angular) {
     'use strict';
 
@@ -21,9 +22,10 @@ define([
     var predixApp = angular.module('predixApp', [
         'app.routes',
         'app.interceptors',
-        'sample.module',
+        'app.module',
         'predix.datasource',
-        'px.ngBindPolymer'
+        'px.ngBindPolymer',
+        'ngAnimate'
     ]);
 
     /**
@@ -39,10 +41,15 @@ define([
             name: 'Predix Seed',
             session: {},
             tabs: [
-                {icon: 'fa-tachometer', state: 'dashboards', label: 'Dashboards'},
-                {icon: 'fa-file-o', state: 'blankpage', label: 'Blank Page', subitems: [
-                    {state: 'blanksubpage', label: 'Blank Sub Page'}
-                ]}
+                {icon: 'fa-tachometer', state: 'defectRatio', label: 'Dashboards', subitems: [
+                    {state: 'defectRatio', label: 'Defect Ratio Dashboard'},
+                    {state: 'defectPattern', label: 'Defect Pattern Dashboard'},
+                    {state: 'debriefTool', label: 'Defect Review Tool'}
+                ]},
+                {icon: 'fa-file-o', state: 'feDefect', label: 'FE Defect%'},
+                {icon: 'fa-file-o', state: 'eagmRawData', label: 'EAGM 2016 Raw Data'},
+                {icon: 'fa-file-o', state: 'detailedGraphs', label: 'Detailed Graphs'},
+                {icon: 'fa-file-o', state: 'feedback', label: 'Send Feedback%'}
             ]
         };
 
@@ -63,6 +70,7 @@ define([
         });
     }]);
 
+    angular.element('.collapse').collapse();
 
     //Set on window for debugging
     window.predixApp = predixApp;
