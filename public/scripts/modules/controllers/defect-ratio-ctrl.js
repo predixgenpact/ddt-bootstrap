@@ -17,9 +17,5 @@ define(['angular', '../app-module'], function (angular) {
                 'Make the problems visible, take action'
             ]
         };
-
-        $scope.graphData = {
-            
-        }
     }
 });

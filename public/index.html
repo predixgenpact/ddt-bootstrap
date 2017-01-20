@@ -25,7 +25,7 @@
 </head>
 
 <body unresolved class="app" data-ng-controller="MainCtrl">
-    <header role="banner">
+    <header role="banner" class="ddt-fixed-header">
         <div class="viewport">
             <h1 class="float--left">
                 <svg class="u-mr--" xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="24" height="24"
@@ -42,11 +42,11 @@
     </header>
     <div class="viewport" style="margin-left: 0px; margin-right: 0px;" >
         <div class="content-wrapper">
-            <px-app-nav  nav-items="{{App.tabs}}" path-prefix="/" path-key="state">
+            <px-app-nav  nav-items="{{App.tabs}}" path-prefix="/" path-key="state" style="margin-top:60px;">
                 <px-login class="sticky"></px-login>
             </px-app-nav>
             <main class="u-pt-- u-pr-- u-pl--" role="main">
-                <div class="container-fluid">
+                <div class="container-fluid" style="margin-top:60px;">
                     <section role="region" ui-view></section>
                 </div>
             </main>

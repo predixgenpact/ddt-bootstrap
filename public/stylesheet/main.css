@@ -1,6 +1,12 @@
 html { overflow: auto !important; }
 body { background: none; }
 main { background: rgb(243,243,254) !important; }
+.ddt-fixed-header {
+    position: fixed;
+    width: 100%;
+    background-color: #3b3b3f;
+    z-index: 20;
+}
 
 #return-to-top {
     position: fixed;
@@ -61,6 +67,6 @@ width: 100%;
     position: absolute;
     top: 15px;
     right: 30px;
-    z-index: 1001;
+    z-index: 10;
     font-size: 18px;
 }
