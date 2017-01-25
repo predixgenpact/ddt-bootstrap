@@ -10,7 +10,7 @@ define(['angular', '../app-module'], function (angular) {
         $scope.dashboardHeaderData = {
             header: 'Debrief Review Tool',
             list : [
-                'Includes fundamental information regarding debrief defects',
+                'Includes fundamental information regarding debrief defectss',
                 'Slicers are for filtering the defects based on region, LCT, modality and role',
                 'See percentages of debrief defects in monthly basis, based on PAT requirements',
                 'Find out most common problems in debriefs and specific deficiencies',
