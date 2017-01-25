@@ -1,17 +1,60 @@
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div ddt-dashboard-header data="dashboardHeaderData" class="card"></div>
+        <div ddt-dashboard-header data="dashboardHeaderData" class="card bg--info"></div>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">
-        <span class="filter-icon"><a href="javascript:">
-            <i class="fa fa-filter" aria-hidden="true" data-ng-click=""></i></a>
+        <span class="filter-icon"><a href="javascript:void(0)">
+            <i class="fa fa-filter" aria-hidden="true" data-ng-click="graphFilter('graphCard1', 'filterCard1')"></i></a>
         </span>
-        <div ddt-line-chart class="card"></div>            
+        <div ddt-line-chart class="card graphCard1"></div>
+        <!-- Filter popover -->
+        <div class="filter filterCard1" data-ng-style="defectRatioGraphsFilter.filterCard1.style">
+            <div data-ng-if="defectRatioGraphsFilter.filterCard1.showContent">
+                <h4>Filter</h4>
+                    <div class="filter-modal-footer">
+                         <button data-ng-click="graphFilter('graphCard1', 'filterCard1')">Cancel</button>  
+                          <button data-ng-click="graphFilter('graphCard1', 'filterCard1')">Cancel</button>  
+                           <button data-ng-click="graphFilter('graphCard1', 'filterCard1')">Cancel</button>  
+                    </div>
+            </div>
+        </div>
+        <!-- /Filter popover -->            
     </div>
     <div class="col-md-6 col-sm-6 col-xs-12">
         <div ddt-column-chart class="card"></div>
     </div>
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div ddt-column-chart class="card"></div>
+        <span class="filter-icon"><a href="javascript:void(0)">
+            <i class="fa fa-filter" aria-hidden="true" data-ng-click="graphFilter('graphCard3', 'filterCard3')"></i></a>
+        </span>
+        <div ddt-column-chart class="card graphCard3"></div>
+        <!-- Filter popover -->
+        <div class="filter filterCard3" data-ng-style="defectRatioGraphsFilter.filterCard3.style">
+            <div data-ng-if="defectRatioGraphsFilter.filterCard3.showContent">
+                <h4>Filter</h4>
+                    <div class="filter-modal-footer">
+                         <button data-ng-click="graphFilter('graphCard3', 'filterCard3')">Cancel</button>  
+                          <button data-ng-click="graphFilter('graphCard3', 'filterCard3')">Cancel</button>  
+                           <button data-ng-click="graphFilter('graphCard3', 'filterCard3')">Cancel</button>  
+                    </div>
+            </div>
+        </div>
+        <!-- /Filter popover -->  
     </div>
+</div>
+
+<span class="common-filter" data-ng-click="openNav()">&#9776; open</span>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" data-ng-click="closeNav()">&times;</a>
+    <select class="selectpicker" data-live-search="true" multiple title="Choose one of the following..." data-actions-box="true">
+        <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+        <option data-tokens="mustard">Burger, Shake and a Smile</option>
+        <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+    </select>
+
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>

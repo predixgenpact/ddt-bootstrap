@@ -39,7 +39,8 @@
     "requirejs-plugins": "1.0.2",
     "google-analytics": "~0.1.0",
     "bootstrap": "^3.3.7",
-    "highcharts": "^5.0.7"
+    "highcharts": "^5.0.7",
+    "bootstrap-select": "^1.12.1"
   },
   "resolutions": {
     "web-animations-js": "~2.0.0",

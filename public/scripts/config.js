@@ -68,7 +68,9 @@ require.config({
         lodash: '../bower_components/lodash/dist/lodash.min',
         jquery: '../bower_components/jquery/dist/jquery.min',
         highcharts: '../bower_components/highcharts/highcharts',
-        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap.min'
+        bootstrap: '../bower_components/bootstrap/dist/js/bootstrap.min',
+        'bootstrap-select': '../bower_components/bootstrap-select/dist/js/bootstrap-select.min',
+        'i18n': '../bower_components/bootstrap-select/dist/js/i18n/defaults-en_US.min'
     },
     priority: [
         'jquery',
@@ -100,6 +102,9 @@ require.config({
         },
         'app': {
             deps: ['angular', 'bootstrap']
+        },
+        'angularjs-dropdown-multiselect': {
+            deps: ['angular']
         }
 
     }
